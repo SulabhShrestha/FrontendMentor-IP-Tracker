@@ -11,7 +11,7 @@ function Homepage() {
   // }
     
   return (
-    <div className="homepage h-[100vh]">
+    <div className="homepage h-[100vh] relative -z-10">
       {/* location background image */}
       <div className="location-bg h-1/3 overflow-clip ">
         <div className="md:hidden h-full">
