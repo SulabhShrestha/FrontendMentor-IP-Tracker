@@ -1,11 +1,14 @@
 import IpHandler from "./components/IpHandler";
+import IpProvider from "./context/IpContext";
 import Homepage from "./pages/Homepage";
 
 function App() {
   return (
     <div className="relative">
-      <IpHandler />
-      <Homepage />
+      <IpProvider>
+        <IpHandler />
+        <Homepage />
+      </IpProvider>
     </div>
   );
 }
