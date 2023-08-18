@@ -6,7 +6,8 @@ function IpHandler() {
   const { ipDetails, setIpDetails, fetchIpDetails } = useContext(IpContext);
 
   return (
-    <div className="ip-handler absolute left-1/2 -translate-x-[50%] top-12 flex justify-center items-center flex-col">
+
+    <div className="ip-handler absolute left-1/2 -translate-x-[50%] top-12 flex justify-center items-center flex-col z-10">
       {/* input for adding ip address of the user */}
       <div className="form-control">
         <div className="input-group">
@@ -38,8 +39,8 @@ function IpHandler() {
       </div>
 
       {/* ip address details */}
-      {ipDetails.display && (
-        <div className="ip-details bg-white w-[80vw] sm:w-[60vw] md:w-[40vw] rounded-lg text-center py-6 mt-4 flex flex-col gap-4">
+      {ipDetails.display&& (
+        <div className="ip-details bg-white w-[80vw] sm:w-[60vw] md:w-[40vw] rounded-lg text-center py-6 mt-4 flex flex-col gap-4 z-10">
           {ipDetails.ipHeadings.map((ipHeading) => (
             <div className="ip" key={ipHeading}>
               <h3 className="text-[12px] text-gray-600 ">

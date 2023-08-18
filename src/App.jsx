@@ -4,12 +4,14 @@ import Homepage from "./pages/Homepage";
 
 function App() {
   return (
-    <div className="relative">
+    
       <IpProvider>
-        <IpHandler />
-        <Homepage />
+
+          <IpHandler />
+          <Homepage />
+
       </IpProvider>
-    </div>
+    
   );
 }
 

@@ -9,9 +9,14 @@ function Homepage() {
   //     .then((res) => res.text())
   //     .then((data) => console.log(data));
   // }
+
+  function handleClick(){
+    console.log("clicked");
+
+  }
     
   return (
-    <div className="homepage h-[100vh] relative -z-10">
+    <div className="homepage h-[100vh] relative">
       {/* location background image */}
       <div className="location-bg h-1/3 overflow-clip ">
         <div className="md:hidden h-full">
