@@ -40,9 +40,9 @@ function IpHandler() {
 
       {/* ip address details */}
       {ipDetails.display&& (
-        <div className="ip-details bg-white w-[80vw] sm:w-[60vw] md:w-[40vw] rounded-lg text-center py-6 mt-4 flex flex-col gap-4 z-10">
+        <div className="ip-details bg-white w-[80vw] sm:w-[60vw] md:w-[80vw] rounded-lg text-center py-6 mt-4 flex flex-col md:flex-row gap-4 z-10 md:justify-evenly divide-x-2">
           {ipDetails.ipHeadings.map((ipHeading) => (
-            <div className="ip" key={ipHeading}>
+            <div className="ip flex justify-start flex-col items-center w-full" key={ipHeading}>
               <h3 className="text-[12px] text-gray-600 ">
                 {ipHeading.toUpperCase()}
               </h3>
