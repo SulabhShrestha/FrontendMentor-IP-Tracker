@@ -6,8 +6,7 @@ function IpHandler() {
   const { ipDetails, setIpDetails, fetchIpDetails } = useContext(IpContext);
 
   return (
-
-    <div className="ip-handler absolute left-1/2 -translate-x-[50%] top-12 flex justify-center items-center flex-col z-10">
+    <div className="ip-handler absolute left-1/2 -translate-x-[50%] top-12 flex justify-center items-center flex-col z-10 overflow-visible">
       {/* input for adding ip address of the user */}
       <div className="form-control">
         <div className="input-group">
@@ -39,14 +38,19 @@ function IpHandler() {
       </div>
 
       {/* ip address details */}
-      {ipDetails.display&& (
-        <div className="ip-details bg-white w-[80vw] sm:w-[60vw] md:w-[80vw] rounded-lg text-center py-6 mt-4 flex flex-col md:flex-row gap-4 z-10 md:justify-evenly divide-x-2">
+      {ipDetails.display && (
+        <div className="ip-details bg-white w-[80vw] sm:w-[60vw] md:w-[80vw] rounded-lg text-center py-6 mt-4 flex flex-col md:flex-row gap-4 md:justify-evenly ">
           {ipDetails.ipHeadings.map((ipHeading) => (
-            <div className="ip flex justify-start flex-col items-center w-full" key={ipHeading}>
+            <div
+              className="ip flex justify-start flex-col items-center w-full"
+              key={ipHeading}
+            >
               <h3 className="text-[12px] text-gray-600 ">
                 {ipHeading.toUpperCase()}
               </h3>
-              <p className="text-2xl font-semibold">{ipDetails.ipData[ipHeading] ?? ipDetails.ipAddress}</p>
+              <p className="text-2xl font-semibold">
+                {ipDetails.ipData[ipHeading] ?? ipDetails.ipAddress}
+              </p>
             </div>
           ))}
         </div>

@@ -1,7 +1,7 @@
 import { Marker, Popup } from "react-leaflet";
 
 function LocationMarker({ipDetails}) {
-    debugger;
+
     return (
       <>
         {ipDetails.coordinates.length === 2 ? (

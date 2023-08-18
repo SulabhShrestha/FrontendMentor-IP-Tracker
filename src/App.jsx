@@ -4,14 +4,11 @@ import Homepage from "./pages/Homepage";
 
 function App() {
   return (
-    
+
       <IpProvider>
-
-          <IpHandler />
-          <Homepage />
-
+        <IpHandler />
+        <Homepage />
       </IpProvider>
-    
   );
 }
 
